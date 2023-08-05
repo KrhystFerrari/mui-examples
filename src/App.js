@@ -1,5 +1,6 @@
 import { Typography, AppBar, Toolbar, Tabs, Tab } from "@mui/material";
 import React, { useState } from "react";
+import Cards from "./components/Cards";
 //import Form from "./components/Form";
 
 function App() {
@@ -23,6 +24,9 @@ function App() {
         </Toolbar>
       </AppBar>
       {/* <Form /> */}
+      <div style={{marginTop: 100}}>
+        <Cards />
+      </div>
     </div>
   );
 }
