@@ -9,6 +9,10 @@ import {
   InputLabel,
   Select,
   MenuItem,
+  FormLabel,
+  FormHelperText,
+  RadioGroup,
+  Radio,
 } from "@mui/material";
 
 const Form = () => {
@@ -18,6 +22,7 @@ const Form = () => {
     password: "",
     terms: false,
     stacks: "",
+    gender: "",
   });
 
   const handleChange = (e) => {
@@ -83,12 +88,26 @@ const Form = () => {
         <br />
         <FormControl fullWidth>
           <InputLabel id="menu">Stacks</InputLabel>
-          <Select label="stacks" value={inputs.stacks} onChange={handleChange} name="stacks">
+          <Select
+            label="stacks"
+            value={inputs.stacks}
+            onChange={handleChange}
+            name="stacks"
+          >
             <MenuItem value={"next"}>Next.js</MenuItem>
             <MenuItem value={"express"}>Express.js</MenuItem>
             <MenuItem value={"nest"}>Nest.js</MenuItem>
             <MenuItem value={"mui"}>Material UI</MenuItem>
           </Select>
+        </FormControl>
+        <br />
+        <FormControl sx={{margin: '20px'}}>
+          <FormLabel>Gender</FormLabel>
+          <RadioGroup name="gender" onChange={handleChange}>
+            <FormControlLabel value={'male'} label='Male' control={<Radio />} />
+            <FormControlLabel value={'female'} label='Female' control={<Radio />} />
+            <FormControlLabel value={'other'} label='Other' control={<Radio />} />
+          </RadioGroup>
         </FormControl>
         <br />
         <Button
