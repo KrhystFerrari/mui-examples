@@ -10,7 +10,6 @@ import {
   Select,
   MenuItem,
   FormLabel,
-  FormHelperText,
   RadioGroup,
   Radio,
 } from "@mui/material";
@@ -101,12 +100,20 @@ const Form = () => {
           </Select>
         </FormControl>
         <br />
-        <FormControl sx={{margin: '20px'}}>
+        <FormControl sx={{ margin: "20px" }}>
           <FormLabel>Gender</FormLabel>
           <RadioGroup name="gender" onChange={handleChange}>
-            <FormControlLabel value={'male'} label='Male' control={<Radio />} />
-            <FormControlLabel value={'female'} label='Female' control={<Radio />} />
-            <FormControlLabel value={'other'} label='Other' control={<Radio />} />
+            <FormControlLabel value={"male"} label="Male" control={<Radio />} />
+            <FormControlLabel
+              value={"female"}
+              label="Female"
+              control={<Radio />}
+            />
+            <FormControlLabel
+              value={"other"}
+              label="Other"
+              control={<Radio />}
+            />
           </RadioGroup>
         </FormControl>
         <br />
