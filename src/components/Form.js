@@ -5,6 +5,10 @@ import {
   FormGroup,
   FormControlLabel,
   Checkbox,
+  FormControl,
+  InputLabel,
+  Select,
+  MenuItem,
 } from "@mui/material";
 
 const Form = () => {
@@ -13,6 +17,7 @@ const Form = () => {
     email: "",
     password: "",
     terms: false,
+    stacks: "",
   });
 
   const handleChange = (e) => {
@@ -75,6 +80,16 @@ const Form = () => {
             }
           />
         </FormGroup>
+        <br />
+        <FormControl fullWidth>
+          <InputLabel id="menu">Stacks</InputLabel>
+          <Select label="stacks" value={inputs.stacks} onChange={handleChange} name="stacks">
+            <MenuItem value={"next"}>Next.js</MenuItem>
+            <MenuItem value={"express"}>Express.js</MenuItem>
+            <MenuItem value={"nest"}>Nest.js</MenuItem>
+            <MenuItem value={"mui"}>Material UI</MenuItem>
+          </Select>
+        </FormControl>
         <br />
         <Button
           type="submit"
