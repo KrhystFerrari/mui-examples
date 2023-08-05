@@ -1,12 +1,18 @@
 import React, { useState } from "react";
-import TextField from "@mui/material/TextField";
-import { Button } from "@mui/material";
+import {
+  Button,
+  TextField,
+  FormGroup,
+  FormControlLabel,
+  Checkbox,
+} from "@mui/material";
 
 const Form = () => {
   const [inputs, setInputs] = useState({
     name: "",
     email: "",
     password: "",
+    terms: false,
   });
 
   const handleChange = (e) => {
@@ -53,6 +59,22 @@ const Form = () => {
           variant="outlined"
           sx={{ margin: "20px" }}
         />
+        <br />
+        <FormGroup sx={{ margin: "20px" }}>
+          <FormControlLabel
+            label="I Agree T&C"
+            control={
+              <Checkbox
+                onChange={() =>
+                  setInputs((prevState) => ({
+                    ...prevState,
+                    terms: !inputs.terms,
+                  }))
+                }
+              />
+            }
+          />
+        </FormGroup>
         <br />
         <Button
           type="submit"
