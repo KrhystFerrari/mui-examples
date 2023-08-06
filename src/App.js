@@ -1,6 +1,7 @@
 import { Typography, AppBar, Toolbar, Tabs, Tab } from "@mui/material";
 import React, { useState } from "react";
-import Containers from "./components/Containers";
+import ListComponent from "./components/ListComponent";
+// import Containers from "./components/Containers";
 //import Modals from "./components/Modals";
 //import Cards from "./components/Cards";
 //import Form from "./components/Form";
@@ -29,7 +30,8 @@ function App() {
       <div style={{marginTop: 100}}>
         {/*<Cards />*/}
         {/* <Modals /> */}
-        <Containers />
+        {/* <Containers /> */}
+        <ListComponent />
       </div>
     </div>
   );
