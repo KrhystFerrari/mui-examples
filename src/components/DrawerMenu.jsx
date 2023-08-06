@@ -7,12 +7,16 @@ import {
   List,
   ListItemButton,
   ListItemText,
+  Rating,
   Snackbar,
+  Typography,
 } from "@mui/material";
 import React, { useState } from "react";
 
 const DrawerMenu = () => {
   const [open, setOpen] = useState(false);
+  const [value, setValue] = useState();
+
   const stacks = [
     "react",
     "next",
@@ -41,7 +45,10 @@ const DrawerMenu = () => {
       </Snackbar>
       <CircularProgress color="secondary" value={75} />
       <br />
-      <LinearProgress  />
+      <LinearProgress />
+      <br />
+      <Rating value={value} onChange={(e, val) => setValue(val)} size="large" precision={0.5} />
+      <Typography>Rated {value !== undefined ? value : 0} stars!</Typography>
     </div>
   );
 };
