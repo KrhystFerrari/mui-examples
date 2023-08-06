@@ -1,7 +1,9 @@
 import {
   Alert,
   Button,
+  CircularProgress,
   Drawer,
+  LinearProgress,
   List,
   ListItemButton,
   ListItemText,
@@ -37,6 +39,9 @@ const DrawerMenu = () => {
       <Snackbar open={true} autoHideDuration={200}>
         <Alert severity="success">Alert in Snackbar</Alert>
       </Snackbar>
+      <CircularProgress color="secondary" value={75} />
+      <br />
+      <LinearProgress  />
     </div>
   );
 };
