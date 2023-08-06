@@ -1,4 +1,12 @@
-import { Button, Drawer, List, ListItemButton, ListItemText } from "@mui/material";
+import {
+  Alert,
+  Button,
+  Drawer,
+  List,
+  ListItemButton,
+  ListItemText,
+  Snackbar,
+} from "@mui/material";
 import React, { useState } from "react";
 
 const DrawerMenu = () => {
@@ -18,15 +26,17 @@ const DrawerMenu = () => {
       </Button>
       <Drawer open={open} onClose={() => setOpen(false)}>
         <List>
-            {
-                stacks.map(stacks => (
-                    <ListItemButton onClick={() => setOpen(false)}>
-                        <ListItemText primary={stacks} />
-                    </ListItemButton>
-                ))
-            }
+          {stacks.map((stacks) => (
+            <ListItemButton onClick={() => setOpen(false)}>
+              <ListItemText primary={stacks} />
+            </ListItemButton>
+          ))}
         </List>
       </Drawer>
+      <br />
+      <Snackbar open={true} autoHideDuration={200}>
+        <Alert severity="success">Alert in Snackbar</Alert>
+      </Snackbar>
     </div>
   );
 };
