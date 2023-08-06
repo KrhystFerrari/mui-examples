@@ -1,4 +1,4 @@
-import { Box, Button, Modal, Typography } from "@mui/material";
+import { Box, Button, Link, Modal, Typography } from "@mui/material";
 import React, { useState } from "react";
 
 const Modals = () => {
@@ -14,6 +14,16 @@ const Modals = () => {
           </Button>
         </Box>
       </Modal>
+      <Link
+        variant="h4"
+        color="secondary"
+        href="https://krhyst-ferrari-dev.vercel.app/"
+        underline="hover"
+        target="_blank"
+        rel="noopener"
+      >
+        Nav Link
+      </Link>
     </div>
   );
 };
