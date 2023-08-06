@@ -1,7 +1,8 @@
 import { Typography, AppBar, Toolbar, Tabs, Tab } from "@mui/material";
 import React, { useState } from "react";
-import Cards from "./components/Cards";
-import Form from "./components/Form";
+import Modals from "./components/Modals";
+//import Cards from "./components/Cards";
+//import Form from "./components/Form";
 
 function App() {
   const [value, setValue] = useState(0);
@@ -25,7 +26,8 @@ function App() {
       </AppBar>
       {/* <Form /> */}
       <div style={{marginTop: 100}}>
-        <Cards />
+        {/*<Cards />*/}
+        <Modals />
       </div>
     </div>
   );
