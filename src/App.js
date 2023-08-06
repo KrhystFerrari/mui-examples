@@ -1,6 +1,7 @@
 import { Typography, AppBar, Toolbar, Tabs, Tab } from "@mui/material";
 import React, { useState } from "react";
-import DrawerMenu from "./components/DrawerMenu";
+import ResponsiveGrid from "./components/ResponsiveGrid";
+// import DrawerMenu from "./components/DrawerMenu";
 // import Accord from "./components/Accord";
 // import ListComponent from "./components/ListComponent";
 // import Containers from "./components/Containers";
@@ -35,7 +36,8 @@ function App() {
         {/* <Containers /> */}
         {/* <ListComponent /> */}
         {/* <Accord /> */}
-        <DrawerMenu />
+        {/* <DrawerMenu /> */}
+        <ResponsiveGrid />
       </div>
     </div>
   );
