@@ -1,6 +1,7 @@
 import { Typography, AppBar, Toolbar, Tabs, Tab } from "@mui/material";
 import React, { useState } from "react";
-import Accord from "./components/Accord";
+import DrawerMenu from "./components/DrawerMenu";
+// import Accord from "./components/Accord";
 // import ListComponent from "./components/ListComponent";
 // import Containers from "./components/Containers";
 //import Modals from "./components/Modals";
@@ -33,7 +34,8 @@ function App() {
         {/* <Modals /> */}
         {/* <Containers /> */}
         {/* <ListComponent /> */}
-        <Accord />
+        {/* <Accord /> */}
+        <DrawerMenu />
       </div>
     </div>
   );
